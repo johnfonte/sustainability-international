@@ -1,0 +1,179 @@
+body, html {
+	margin: 0;
+	background-color: #fdf2b5;
+	/*min-width: 600px;*/
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	color: #555;
+}
+
+.tabs {
+
+	float: right;
+	padding-top: 40%;
+}
+
+.bg-home {
+	background-image: url('../img/home.jpg');
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	display: block;
+	/*width: 100%;*/
+	position: absolute;
+}
+
+@media (max-width: 600px) {
+	.container, .bg-home {
+		width: 350px;
+	}
+	.bg-home {
+		height: 233px;
+		background-size: 350px 233px;
+		margin-top: 50px;
+	}
+	.logo {
+		background-size: 100px 100px;
+		width: 100px;
+		height: 100px;
+	}
+	.body {
+		font-size: 6px;
+	}
+	.tagline {
+		font-size: 1.4em;
+		display: none;
+	}
+	.tabs {
+		padding-top: 60px;
+	}
+	.logo {
+		top: -48px;
+		left: 125px;
+	}
+}
+
+@media (min-width: 600px) {
+	.container, .bg-home {
+		width: 500px;
+	}
+	.bg-home {
+		height: 333px;
+		background-size: 500px 333px;
+		margin-top: 64px;
+	}
+	.logo {
+		background-size: 133px 133px;
+		width: 133px;
+		height: 133px;
+	}
+	.body {
+		font-size: 8px;
+	}
+	.tagline {
+		font-size: .65em;
+		display: none;
+	}
+	.tabs {
+		padding-top: 180px;
+	}
+	.logo {
+		top: -64px;
+		left: 175px;
+	}
+}
+
+@media (min-width: 900px) {
+	.container, .bg-home {
+		width: 800px;
+	}
+	.bg-home {
+		height: 533px;
+		background-size: 800px 533px;
+		margin-top: 80px;
+	}
+	.logo {
+		background-size: 166px 166px;
+		width: 166px;
+		height: 166px;
+	}
+	.body {
+		font-size: 12px;
+	}
+	.tagline {
+		font-size: 1.1em;
+		display: block;
+	}
+	.tabs {
+		padding-top: 240px;
+	}
+	.logo {
+		top: -80px;
+		left: 300px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container, .bg-home {
+		width: 1100px;
+	}
+	.bg-home {
+		height: 733px;
+		background-size: 1100px 733px;
+		margin-top: 100px;
+	}
+	.logo {
+		background-size: 200px 200px;
+		width: 200px;
+		height: 200px;
+	}
+	.tagline {
+		font-size: 1.4em;
+		display: block;
+	}
+	.tabs {
+		padding-top: 410px;
+	}
+	.logo {
+		top: -95px;
+		left: 425px;
+	}
+}
+
+.container {
+	margin: 0 auto;
+}
+.tagline {
+
+	text-align: center;
+	text-transform: uppercase;
+}
+.tagline.tag-1 {
+		padding-top: 4.8em;
+	/*color: #b78b1c;*/
+}
+.tab a {
+	padding: 5px 0 5px 5px;
+}
+.tab {
+	/*text-align: right;*/
+	background-color: #fdf2b5;
+	margin-bottom: 5%;
+	padding: 5px 0 5px 5px;
+}
+
+.logo-wrap {
+	margin: 0 auto;
+}
+.logo {
+	margin: 0 auto;
+	background-image: url('../img/logo.png');
+	background-repeat: no-repeat;
+	position: absolute;
+}
+

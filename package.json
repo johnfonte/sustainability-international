@@ -1,0 +1,30 @@
+{
+  "name": "sustainabilityinternational",
+  "version": "0.0.0",
+  "description": "Code for site http://sustainabilityinternational.org",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "~3.3.4",
+    "ejs-locals": "~1.0.2",
+    "ejs": "~0.8.4",
+    "moment": "~2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/johnfonte/sustainabilityinternational.git"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "John Fonte",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/johnfonte/sustainabilityinternational/issues"
+  },
+  "homepage": "https://github.com/johnfonte/sustainabilityinternational"
+}
