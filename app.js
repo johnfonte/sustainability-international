@@ -50,22 +50,34 @@ var SIApp = function() {
 
 	self.createRoutes = function() {
 		self.get_routes = {};
+        self.pages = ['','sustainable','benefits','involvement'];
 		self.get_routes['/*'] = function(req, res) {
-            res.setHeader('Content-Type', 'text/html; charset=utf8');
+            var rendered = false;
             var url = req.url;
-            if(url == "/") {
-	            res.render('home');
-	        } else if(url == "/sustainable") {
-	        	res.render("sustainable");
-        	} else if(url == "/benefits") {
-	        	res.render("benefits");
-    		} else if(url == "/involvement") {
-	        	res.render("involvement");
-    		} else if(url == "/contact") {
-	        	res.render("contact");
-	        } else {
-	        	res.redirect("/");
-	        }
+            console.log(req.url);
+            for(var i=0; i<self.pages.length; i++) {
+                console.log('page '+i);
+                var page = self.pages[i];
+                var pageWithSlash = "/"+page;
+                if(url == pageWithSlash) {
+                    console.log('rendered');
+                    res.setHeader('Content-Type', 'text/html; charset=utf8');
+                    if(page == '') {
+                        res.render('home');
+                    } else {
+                        res.render(page);
+                    }
+                    rendered = true;
+                    console.log('rendered');
+                    break;
+                }
+            }
+            console.log('end for');
+            if(rendered == false) {
+                console.log("redirect");
+                res.redirect('/');
+
+            }
         }
     }
 

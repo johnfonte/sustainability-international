@@ -1,6 +1,7 @@
 body, html {
 	margin: 0;
 	background-color: #fdf2b5;
+	font-family: Calisto MT,Bookman Old Style,Bookman,Goudy Old Style,Garamond,Hoefler Text,Bitstream Charter,Georgia,serif; 
 	/*min-width: 600px;*/
 }
 
@@ -14,9 +15,39 @@ a:hover {
 }
 
 .tabs {
-
+	/*float: right;*/
+	/*padding-top: 40%;*/
+	background-color: #fdf2b5;
+	width: 100%;
+	height: 30px;
+}
+.tabs .left {
+	float: left;
+}
+.tabs .right {
 	float: right;
-	padding-top: 40%;
+}
+
+.tab {
+	float: left;
+	/*text-align: right;*/
+	/*width: 20%;*/
+	background-color: #fdf2b5;
+	/*margin-bottom: 5%;*/
+	padding: 5px 0;
+}
+
+.tab {
+	border: #ead486 solid 1px;
+	border-left: 0px;
+	border-bottom: 0px;
+}
+.tabs .left .tab:first-child, .tabs .right .tab:first-child {
+	border-left: #ead486 solid 1px;
+}
+
+.tab a {
+	padding: 5px;
 }
 
 .bg-home {
@@ -30,17 +61,29 @@ a:hover {
 
 @media (max-width: 600px) {
 	.container, .bg-home {
-		width: 350px;
+		width: 100%;
+	}
+	.tab {
+		font-size: .8em;
+	    border-left: #ead486 solid 1px;
+	}
+	.tabs .left {
+		float: right;
+	}
+	.tab, .tabs .left, .tabs .right {
+		float: right;
+	    clear: right;
 	}
 	.bg-home {
-		height: 233px;
-		background-size: 350px 233px;
-		margin-top: 50px;
+		height: 70%;
+		background-size: contain;
+		margin-top: 75px;
 	}
 	.logo {
 		background-size: 100px 100px;
 		width: 100px;
 		height: 100px;
+		top: -105px;
 	}
 	.body {
 		font-size: 6px;
@@ -49,23 +92,16 @@ a:hover {
 		font-size: 1.4em;
 		display: none;
 	}
-	.tabs {
-		padding-top: 60px;
-	}
-	.logo {
-		top: -48px;
-		left: 125px;
-	}
 }
 
 @media (min-width: 600px) {
 	.container, .bg-home {
-		width: 500px;
+		width: 600px;
 	}
 	.bg-home {
-		height: 333px;
-		background-size: 500px 333px;
-		margin-top: 64px;
+		height: 400px;
+		background-size: 600px 400px;
+		margin-top: 82px;
 	}
 	.logo {
 		background-size: 133px 133px;
@@ -75,16 +111,23 @@ a:hover {
 	.body {
 		font-size: 8px;
 	}
+	.tab {
+		font-size: .9em;
+	    border-left: #ead486 solid 1px;
+	}
+	.tabs .left {
+		float: right;
+	}
+	.tab, .tabs .left, .tabs .right {
+		float: right;
+	    clear: right;
+	}
 	.tagline {
 		font-size: .65em;
 		display: none;
 	}
-	.tabs {
-		padding-top: 180px;
-	}
 	.logo {
-		top: -64px;
-		left: 175px;
+		top: -112px;
 	}
 }
 
@@ -95,7 +138,7 @@ a:hover {
 	.bg-home {
 		height: 533px;
 		background-size: 800px 533px;
-		margin-top: 80px;
+		margin-top: 0;
 	}
 	.logo {
 		background-size: 166px 166px;
@@ -105,16 +148,33 @@ a:hover {
 	.body {
 		font-size: 12px;
 	}
+	.tabs {
+		margin-top: 50px;
+	}
+	.tab {
+	    border-left: #ead486 solid 1px;
+	    margin-top: 0;
+	    font-size: .9em;
+	    float: left;
+	    clear: none;
+	}
+	.tabs .left {
+		float: left;
+	}
+	.tabs .right {
+		float: right;
+	}
 	.tagline {
-		font-size: 1.1em;
+		font-size: 1em;
 		display: block;
 	}
-	.tabs {
-		padding-top: 240px;
+	.tagline.tag-1 {
+		padding-top: 5.1em;
+	/*color: #b78b1c;*/
 	}
 	.logo {
 		top: -80px;
-		left: 300px;
+		left: 313px;
 	}
 }
 
@@ -125,23 +185,30 @@ a:hover {
 	.bg-home {
 		height: 733px;
 		background-size: 1100px 733px;
-		margin-top: 100px;
+		margin-top: 0;
 	}
 	.logo {
 		background-size: 200px 200px;
 		width: 200px;
 		height: 200px;
 	}
+	.tab {
+		font-size: 1em;
+	}
+	.tabs {
+		margin-top: 65px;
+	}
 	.tagline {
 		font-size: 1.4em;
 		display: block;
 	}
-	.tabs {
-		padding-top: 410px;
+	.tagline.tag-1 {
+		padding-top: 4.8em;
+	/*color: #b78b1c;*/
 	}
 	.logo {
 		top: -95px;
-		left: 425px;
+		left: 450px;
 	}
 }
 
@@ -149,22 +216,9 @@ a:hover {
 	margin: 0 auto;
 }
 .tagline {
-
+font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
 	text-align: center;
 	text-transform: uppercase;
-}
-.tagline.tag-1 {
-		padding-top: 4.8em;
-	/*color: #b78b1c;*/
-}
-.tab a {
-	padding: 5px 0 5px 5px;
-}
-.tab {
-	/*text-align: right;*/
-	background-color: #fdf2b5;
-	margin-bottom: 5%;
-	padding: 5px 0 5px 5px;
 }
 
 .logo-wrap {
