@@ -26,7 +26,7 @@ var SIApp = function() {
 
 	self.terminator = function(sig){
         if (typeof sig === "string") {
-           console.log('%s: Received %s - terminating app \'golfbmpsolutions\'...',
+           console.log('%s: Received %s - terminating app \'sustainability-international\'...',
                        moment(), sig);
            process.exit(1);
         }
@@ -54,13 +54,10 @@ var SIApp = function() {
 		self.get_routes['/*'] = function(req, res) {
             var rendered = false;
             var url = req.url;
-            console.log(req.url);
             for(var i=0; i<self.pages.length; i++) {
-                console.log('page '+i);
                 var page = self.pages[i];
                 var pageWithSlash = "/"+page;
                 if(url == pageWithSlash) {
-                    console.log('rendered');
                     res.setHeader('Content-Type', 'text/html; charset=utf8');
                     if(page == '') {
                         res.render('home');
@@ -68,13 +65,10 @@ var SIApp = function() {
                         res.render(page);
                     }
                     rendered = true;
-                    console.log('rendered');
                     break;
                 }
             }
-            console.log('end for');
             if(rendered == false) {
-                console.log("redirect");
                 res.redirect('/');
 
             }
