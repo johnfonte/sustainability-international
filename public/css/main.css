@@ -1,10 +1,15 @@
 body, html {
 	margin: 0;
-	background-color: #fdf2b5;
+	/*background-color: #fdf2b5;*/
 	font-family: Calisto MT,Bookman Old Style,Bookman,Goudy Old Style,Garamond,Hoefler Text,Bitstream Charter,Georgia,serif; 
 	/*min-width: 600px;*/
+	height: 100%;
+	width: 100%;
+	color: #fff;
 }
-
+html {
+	background-color: #fdf2b5;
+}
 a, a:hover {
 	-webkit-transition: color 0.3s ease-in;
 	-moz-transition: color 0.3s ease-in;
@@ -14,60 +19,75 @@ a, a:hover {
 }
 a {
 	text-decoration: none;
-	color: #000;
+	color: #fff;
 }
 
 a:hover {
 	color: #555;
 }
 
-.footer {
-	z-index: 1;
+.container {
+	margin: 0 auto;
 	position: relative;
+	min-height: 100%;
+}
+.tagline {
+	font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	opacity: 1;
 }
 
+.logo {
+	/*margin: 0 auto;*/
+	background-image: url('../img/logo.png');
+	background-repeat: no-repeat;
+	position: relative;
+	float: left;
+}
+
+.footer {
+	margin: 0 auto;
+	display: block;
+	width: 80%;
+	padding: 0 10%;
+	clear: left;
+	line-height: 2em;
+	height: 2em;
+	margin-top: 1em;
+	position: absolute;
+	bottom: 0;
+}
 .footer a {
 	float: left;
-	margin-right: 5px;
+	margin-right: 10px;
 }
-
-.tabs {
-	/*float: right;*/
-	/*padding-top: 40%;*/
-	background-color: #fdf2b5;
-	width: 100%;
-	height: 27px;
-}
-.tabs .left {
-	float: left;
-}
-.tabs .right {
+.footer a.right {
 	float: right;
 }
 
+.benefits-list, .prove, .involve, .steward, .stars, .customization {
+	font-family: sans-serif;
+}
+
+.tabs {
+	background-color: #b68000;
+	width: 100%;
+	height: 2.2em;
+	border-bottom-right-radius: 1em;
+	border-bottom-left-radius: 1em;
+}
 .tab {
 	float: left;
-	/*text-align: right;*/
-	/*width: 20%;*/
-	background-color: #fdf2b5;
-	/*margin-bottom: 5%;*/
-	padding: 5px 0;
+	background-color: #b68000;
+	border-right: #ead486 solid 1px;
+	padding: .5em;
 }
-
-.tab {
-	border: #ead486 solid 1px;
-	border-left: 0px;
-	border-bottom: 0px;
+.tab.active {
+	background-color: #C29A3A;
 }
-.tabs .left .tab:first-child, .tabs .right .tab:first-child {
-	border-left: #ead486 solid 1px;
-}
-
-.tab a {
-	padding: 5px;
-}
-
-.tab a:hover {
+.tab:hover {
 	background-color: #ead486;
 	-webkit-transition: background-color 0.3s ease-in;
 	-moz-transition: background-color 0.3s ease-in;
@@ -75,221 +95,145 @@ a:hover {
 	-o-transition: background-color 0.3s ease-in;
 	transition: background-color 0.3s ease-in
 }
+.content {
+	clear: left;
+	width: 80%;
+	margin: 0 auto;
+	padding: 2em 0;
+}
 
 .bg-home {
-	background-image: url('../img/home.jpg');
-	background-repeat: no-repeat;
-	margin: 0 auto;
-	display: block;
-	/*width: 100%;*/
+	background: url('../img/home.jpg') no-repeat center center fixed;
+	background-size: cover;
 }
-
 .bg-home.sustainable {
-	background-image: url('../img/sustainable.jpg');
+	background-image: url('../img/sustainable-scaled.jpg');
 }
-
 .bg-home.benefits {
-	background-image: url('../img/benefits.jpg');
+	background-image: url('../img/benefits-scaled.jpg');
 }
-
 .bg-home.involvement {
-	background-image: url('../img/involvement.jpg');
+	background-image: url('../img/involvement-scaled.jpg');
 }
 
-@media (max-width: 600px) {
-	.container, .bg-home {
+.glass {
+	position: fixed;
+	background-color: #000;
+	opacity: .4;
+	height: 100%;
+	width: 100%;
+}
+
+.diamonds {
+	background-image: url('../img/diamonds-sm.png');
+	/*background-color: #b68000;*/
+	background-repeat: no-repeat;
+	background-size: 47px 16px;
+	width: 47px;
+	height: 20px;
+	padding: 2px 0;
+}
+
+.diamonds.five {
+	width: 47px;
+	margin-top: 3px;
+}
+.diamonds.four {
+	width: 38px;
+}
+.diamonds.three {
+	width: 29px;
+}
+.diamonds.two {
+	width: 19px;
+}
+.diamonds.one {
+	width: 10px;
+}
+
+@media (max-width: 680px) {
+	body, html {
+		font-size: small;
+	}
+	.container {
 		width: 100%;
 	}
+
+	.tabs {
+		overflow: hidden;
+		border-radius: 0;
+		height: inherit;
+	}
 	.tab {
-		font-size: .8em;
-	    border-left: #ead486 solid 1px;
-	}
-	.tabs .left {
-		float: right;
-	}
-	.tab, .tabs .left, .tabs .right {
+		width: 60%;
 		float: right;
 	    clear: right;
-	}
-	.bg-home {
-		height: 70%;
-		background-size: contain;
-		margin-top: 75px;
-		position: absolute;
 	}
 	.logo {
 		background-size: 100px 100px;
 		width: 100px;
 		height: 100px;
-		top: -102px;
 	}
 	.body {
 		font-size: 6px;
 	}
 	.tagline {
-		font-size: 1.4em;
-		display: none;
+		color: #fff;
+		margin: 0 auto;
+	}
+	.content {
+		padding-bottom: 6em;
 	}
 	.footer {
-		display: inline-block;
-		margin-top: 68%;
-		padding: 0 5%;
+		height: 6em;
 	}
-	.footer.sustainable {
-		margin-top: 68%;
-	}
-	.footer.benefits {
-		margin-top: 73%;
-	}
-	.footer.involvement {
-		margin-top: 82%;
-	}
-	.footer a {
-		margin-right: 0px;
-		margin-left: 10px;
+	.footer a, .footer a.right {
+		clear: left;
+		float: left;
 	}
 }
 
-@media (min-width: 600px) {
-	.container, .bg-home {
-		width: 600px;
+@media (min-width: 680px) and (max-width: 900px) {
+	body, html {
+		font-size: small;
 	}
-	.bg-home {
-		height: 400px;
-		background-size: 600px 400px;
-		margin-top: 81px;
-		position: relative;
+	.container {
+		width: 100%;
 	}
 	.logo {
-		background-size: 133px 133px;
-		width: 133px;
-		height: 133px;
-	}
-	.body {
-		font-size: 8px;
-	}
-	.tab {
-		font-size: .9em;
-	    border-left: #ead486 solid 1px;
-	}
-	.tabs .left {
-		float: right;
-	}
-	.tab, .tabs .left, .tabs .right {
-		float: right;
-	    clear: right;
-	}
-	.tagline {
-		font-size: .65em;
-		display: none;
-	}
-	.logo {
-		top: -108px;
-	}
-	.footer {
-		display: block;
-		margin-top: 10px;
+		background-size: 88px 88px;
+		width: 88px;
+		height: 88px;
 	}
 }
 
 @media (min-width: 900px) {
-	.container, .bg-home {
-		width: 800px;
+	body, html {
+		font-size: medium;
 	}
-	.bg-home {
-		height: 533px;
-		background-size: 800px 533px;
-		margin-top: 0;
+	.container {
+		width: 100%;
+		max-width: 800px;
+	}
+	.content {
+		width: 100%;
 	}
 	.logo {
-		background-size: 166px 166px;
-		width: 166px;
-		height: 166px;
+		background-size: 100px 100px;
+		width: 100px;
+		height: 100px;
 	}
 	.body {
 		font-size: 12px;
 	}
-	.tabs {
-		margin-top: 53px;
-	}
 	.tab {
 	    border-left: 0px;
 	    margin-top: 0;
-	    font-size: .9em;
 	    float: left;
 	    clear: none;
 	}
-	.tabs .left {
-		float: left;
-	}
-	.tabs .right {
-		float: right;
-	}
-	.tagline {
-		font-size: 1em;
-		display: block;
-	}
-	.tagline.tag-1 {
-		padding-top: 5.1em;
-	/*color: #b78b1c;*/
-	}
-	.logo {
-		top: -80px;
-		left: 313px;
+	.footer {
+		width: 100%;
+		padding: 0;
 	}
 }
-
-@media (min-width: 1200px) {
-	.container, .bg-home {
-		width: 1100px;
-	}
-	.bg-home {
-		height: 733px;
-		background-size: 1100px 733px;
-		margin-top: 0;
-	}
-	.logo {
-		background-size: 200px 200px;
-		width: 200px;
-		height: 200px;
-	}
-	.tab {
-		font-size: 1em;
-	}
-	.tabs {
-		margin-top: 65px;
-		height: 29px;
-	}
-	.tagline {
-		font-size: 1.4em;
-		display: block;
-	}
-	.tagline.tag-1 {
-		padding-top: 4.8em;
-	/*color: #b78b1c;*/
-	}
-	.logo {
-		top: -95px;
-		left: 450px;
-	}
-}
-
-.container {
-	margin: 0 auto;
-}
-.tagline {
-font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
-	text-align: center;
-	text-transform: uppercase;
-}
-
-.logo-wrap {
-	margin: 0 auto;
-}
-.logo {
-	margin: 0 auto;
-	background-image: url('../img/logo.png');
-	background-repeat: no-repeat;
-	position: absolute;
-}
-

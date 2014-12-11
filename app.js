@@ -51,11 +51,14 @@ var SIApp = function() {
 	self.createRoutes = function() {
 		self.get_routes = {};
         self.pages = ['','sustainable','benefits','involvement'];
+        self.pageNames = ['Home','Sustainable Communities','Benefits','Community Involvement'];
 		self.get_routes['/*'] = function(req, res) {
             var rendered = false;
             var url = req.url;
             for(var i=0; i<self.pages.length; i++) {
                 var page = self.pages[i];
+                res.locals.page = page;
+                res.locals.pageName = self.pageNames[i];
                 var pageWithSlash = "/"+page;
                 if(url == pageWithSlash) {
                     res.setHeader('Content-Type', 'text/html; charset=utf8');
