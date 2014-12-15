@@ -47,6 +47,17 @@ a:hover {
 	float: left;
 }
 
+div.title {
+	clear: left;
+	font-weight: bold;
+}
+
+div.description {
+	margin: 1em 0 2em 0;
+}
+.involvement div {
+	margin-bottom: 9px;
+}
 .footer {
 	margin: 0 auto;
 	display: block;
@@ -67,7 +78,7 @@ a:hover {
 	float: right;
 }
 
-.benefits-list, .prove, .involve, .steward, .stars, .customization {
+.sans {
 	font-family: sans-serif;
 }
 
@@ -119,7 +130,7 @@ a:hover {
 .glass {
 	position: fixed;
 	background-color: #000;
-	opacity: .4;
+	opacity: .5;
 	height: 100%;
 	width: 100%;
 }
@@ -136,7 +147,7 @@ a:hover {
 
 .diamonds.five {
 	width: 47px;
-	margin-top: 3px;
+	margin-top: 1em;
 }
 .diamonds.four {
 	width: 38px;
@@ -168,14 +179,12 @@ a:hover {
 		width: 60%;
 		float: right;
 	    clear: right;
+		border: 0;
 	}
 	.logo {
 		background-size: 100px 100px;
 		width: 100px;
 		height: 100px;
-	}
-	.body {
-		font-size: 6px;
 	}
 	.tagline {
 		color: #fff;
@@ -223,8 +232,11 @@ a:hover {
 		width: 100px;
 		height: 100px;
 	}
-	.body {
-		font-size: 12px;
+	.involvement div {
+		margin-bottom: 9px;
+	}
+	.diamonds {
+		padding-bottom: 5px;
 	}
 	.tab {
 	    border-left: 0px;
