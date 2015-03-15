@@ -34,7 +34,6 @@ a:hover {
 .tagline {
 	font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
 	text-align: center;
-	text-transform: uppercase;
 	color: #fff;
 	opacity: 1;
 }
@@ -55,7 +54,7 @@ div.title {
 div.description {
 	margin: 1em 0 2em 0;
 }
-.involvement div {
+.percent {
 	margin-bottom: 9px;
 }
 .footer {
@@ -74,9 +73,6 @@ div.description {
 	float: left;
 	margin-right: 10px;
 }
-.footer a.right {
-	float: right;
-}
 
 .sans {
 	font-family: sans-serif;
@@ -94,6 +90,9 @@ div.description {
 	background-color: #b68000;
 	border-right: #ead486 solid 1px;
 	padding: .5em;
+}
+.tab.last {
+	border-right: none;
 }
 .tab.active {
 	background-color: #C29A3A;
@@ -137,12 +136,14 @@ div.description {
 
 .diamonds {
 	background-image: url('../img/diamonds-sm.png');
-	/*background-color: #b68000;*/
+	background-color: #b68000;
 	background-repeat: no-repeat;
 	background-size: 47px 16px;
+	border-radius: 4px;
 	width: 47px;
-	height: 20px;
+	height: 13px;
 	padding: 2px 0;
+	margin: 7px 0;
 }
 
 .diamonds.five {
@@ -162,6 +163,10 @@ div.description {
 	width: 10px;
 }
 
+.footer a.right {
+	float: right;
+}
+
 @media (max-width: 680px) {
 	body, html {
 		font-size: small;
@@ -175,16 +180,22 @@ div.description {
 		border-radius: 0;
 		height: inherit;
 	}
-	.tab {
-		width: 60%;
+	.tabs .right {
+		display: inline-block;
 		float: right;
+		width: 60%;
+	}
+	.tab {
+		width: 100%;
+		/*float: right;*/
 	    clear: right;
 		border: 0;
 	}
 	.logo {
 		background-size: 100px 100px;
-		width: 100px;
-		height: 100px;
+		background-position: center;
+		width: 40%;
+		height: 110px;
 	}
 	.tagline {
 		color: #fff;
@@ -232,11 +243,11 @@ div.description {
 		width: 100px;
 		height: 100px;
 	}
-	.involvement div {
+	.percent {
 		margin-bottom: 9px;
 	}
 	.diamonds {
-		padding-bottom: 5px;
+		margin-bottom: 10px;
 	}
 	.tab {
 	    border-left: 0px;

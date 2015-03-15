@@ -13,6 +13,26 @@
   </head>
 
   <body>
-    <%-body -%>
+    <div class="glass">
+    </div>
+    <div class="container">
+      <div class="tabs">
+        <div class="logo"></div>
+        <div class="right">
+          <a class="tab <%-(page == '')? 'active':'' -%>" href="/">HOME</a>
+          <a class="tab <%-(page == 'involvement')? 'active':'' -%>" href="/involvement">COMMUNITY INVOLVEMENT</a>
+          <a class="tab <%-(page == 'benefits')? 'active':'' -%>" href="/benefits">BENEFITS</a>
+          <a class="tab <%-(page == 'sustainable')? 'active':'' -%> last" href="/sustainable">SUSTAINABLE COMMUNITIES</a>
+        </div>
+      </div>
+      <div class="content">
+        <%-body -%>
+      </div>
+      <div class="footer">
+        <a href="tel:8668723708"><i class="fa fa-phone-square"></i> 866-872-3708</a>
+        <a href="mailto:info@sustainabilityinternational.org"><i class="fa fa-envelope"></i> info@sustainabilityinternational.org</a>
+        <a href="http://golfbmpsolutions.com" class="right">Visit Golf BMP Solutions</a>
+      </div>
+    </div>
   </body>
 </html>
