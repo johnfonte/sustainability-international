@@ -50,8 +50,8 @@ var SIApp = function() {
 
 	self.createRoutes = function() {
 		self.get_routes = {};
-        self.pages = ['','sustainable','benefits','involvement'];
-        self.pageNames = ['Home','Sustainable Communities','Benefits','Community Involvement'];
+        self.pages = ['','golf-bmps','sustainable','benefits','involvement'];
+        self.pageNames = ['Home','Golf BMPs','Sustainable Communities','Benefits','Community Involvement'];
 		self.get_routes['/*'] = function(req, res) {
             var rendered = false;
             var url = req.url;

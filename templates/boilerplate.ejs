@@ -1,38 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-home <%=page%>">
-  <head>
-    <title>Sustainability International | <%=pageName%></title>
+<html lang="en" class="bg-home <%= page %>">
+<head>
+    <title>Sustainability International | <%= pageName %></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href='img/favicon.ico'/>
-    <link rel='stylesheet' href='css/main.css' />
-    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' />
-  </head>
+    <link rel='stylesheet' href='css/main.css'/>
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'/>
+</head>
 
-  <body>
-    <div class="glass">
-    </div>
+<body>
+<div class="glass">
+</div>
+<div class="container-outer">
     <div class="container">
-      <div class="tabs">
-        <div class="logo"></div>
-        <div class="right">
-          <a class="tab <%-(page == '')? 'active':'' -%>" href="/">HOME</a>
-          <a class="tab <%-(page == 'involvement')? 'active':'' -%>" href="/involvement">COMMUNITY INVOLVEMENT</a>
-          <a class="tab <%-(page == 'benefits')? 'active':'' -%>" href="/benefits">BENEFITS</a>
-          <a class="tab <%-(page == 'sustainable')? 'active':'' -%> last" href="/sustainable">SUSTAINABLE COMMUNITIES</a>
+        <div class="container-inner">
+            <div class="tabs">
+                <a href="/">
+                    <div class="logo"></div>
+                </a>
+                <div class="right">
+                    <a class="tab <%-(page == 'golf-bmps')? 'active':'' -%>" href="/golf-bmps">Golf BMPs</a>
+                    <a class="tab <%-(page == 'sustainable')? 'active':'' -%>" href="/sustainable">Sustainable
+                        Communities</a>
+                    <a class="tab <%-(page == 'involvement')? 'active':'' -%>" href="/involvement">Community
+                        Involvement</a>
+                    <a class="tab <%-(page == 'benefits')? 'active':'' -%>" href="/benefits">Benefits</a>
+                </div>
+            </div>
+            <div class="content">
+                <%-body -%>
+            </div>
         </div>
-      </div>
-      <div class="content">
-        <%-body -%>
-      </div>
-      <div class="footer">
-        <a href="tel:8668723708"><i class="fa fa-phone-square"></i> 866-872-3708</a>
-        <a href="mailto:info@sustainabilityinternational.org"><i class="fa fa-envelope"></i> info@sustainabilityinternational.org</a>
-        <a href="http://golfbmpsolutions.com" class="right">Visit Golf BMP Solutions</a>
-      </div>
+        <div class="footer">
+            <a href="tel:8668723708"><i class="fa fa-phone-square"></i> 866-872-3708</a>
+            <a href="mailto:info@sustainabilityinternational.org"><i class="fa fa-envelope"></i>
+                info@sustainabilityinternational.org</a>
+            <div style="color: white;"><span>Powered by </span><a href="http://www.golfsafety.com" style="margin: 0;">Golf Safety</a><span> and </span><a href="http://www.turfdietitian.com">Turf Dietitian</a></span>
+        </div>
     </div>
-  </body>
+</div>
+</body>
 </html>

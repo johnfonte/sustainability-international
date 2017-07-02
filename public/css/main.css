@@ -5,7 +5,8 @@ body, html {
 	/*min-width: 600px;*/
 	height: 100%;
 	width: 100%;
-	color: #fff;
+	color: #111;
+	text-shadow: black 1px;
 }
 html {
 	background-color: #fdf2b5;
@@ -23,18 +24,37 @@ a {
 }
 
 a:hover {
-	color: #555;
+	color: #b68000;
 }
 
+.inner-link {
+    text-align: center;
+    color: #b68000;
+}
+
+.inner-link:hover {
+    color: black;
+}
+
+
+.container-outer {
+	max-height: 100%;
+}
 .container {
 	margin: 0 auto;
 	position: relative;
-	min-height: 100%;
+	padding-bottom: 50px;
+}
+.container-inner {
+	padding: 0 20px;
+	background-color: rgba(255,255,255,.8);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 10px black;
 }
 .tagline {
 	font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
 	text-align: center;
-	color: #fff;
 	opacity: 1;
 }
 
@@ -51,6 +71,13 @@ div.title {
 	font-weight: bold;
 }
 
+div.header {
+	clear: left;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+}
+
 div.description {
 	margin: 1em 0 2em 0;
 }
@@ -61,7 +88,7 @@ div.description {
 	margin: 0 auto;
 	display: block;
 	width: 80%;
-	padding: 0 10%;
+	/*padding: 0 10%;*/
 	clear: left;
 	line-height: 2em;
 	height: 2em;
@@ -70,7 +97,7 @@ div.description {
 	bottom: 0;
 }
 .footer a {
-	float: left;
+	/*float: left;*/
 	margin-right: 10px;
 }
 
@@ -84,6 +111,7 @@ div.description {
 	height: 2.2em;
 	border-bottom-right-radius: 1em;
 	border-bottom-left-radius: 1em;
+	box-shadow: 0px 0px 10px black;
 }
 .tab {
 	float: left;
@@ -113,14 +141,17 @@ div.description {
 }
 
 .bg-home {
-	background: url('../img/home.jpg') no-repeat center center fixed;
+	background: url('../img/golf-photo-1.jpg') no-repeat center center fixed;
 	background-size: cover;
 }
 .bg-home.sustainable {
-	background-image: url('../img/sustainable-scaled.jpg');
+	background-image: url('../img/golf-photo-2.jpg');
+}
+.bg-home.bmps {
+	background-image: url('../img/golf-photo-3.jpg');
 }
 .bg-home.benefits {
-	background-image: url('../img/benefits-scaled.jpg');
+	background-image: url('../img/sustainable-scaled.jpg');
 }
 .bg-home.involvement {
 	background-image: url('../img/involvement-scaled.jpg');
@@ -129,14 +160,13 @@ div.description {
 .glass {
 	position: fixed;
 	background-color: #000;
-	opacity: .5;
+	opacity: .3;
 	height: 100%;
 	width: 100%;
 }
 
 .diamonds {
 	background-image: url('../img/diamonds-sm.png');
-	background-color: #b68000;
 	background-repeat: no-repeat;
 	background-size: 47px 16px;
 	border-radius: 4px;
@@ -173,6 +203,7 @@ div.description {
 	}
 	.container {
 		width: 100%;
+        padding-bottom: 75px;
 	}
 
 	.tabs {
@@ -207,7 +238,7 @@ div.description {
 	.footer {
 		height: 6em;
 	}
-	.footer a, .footer a.right {
+	.footer a, .footer span, .footer a.right {
 		clear: left;
 		float: left;
 	}
@@ -256,7 +287,7 @@ div.description {
 	    clear: none;
 	}
 	.footer {
-		width: 100%;
-		padding: 0;
+		/*width: 100%;*/
+		/*padding: 0;*/
 	}
 }
