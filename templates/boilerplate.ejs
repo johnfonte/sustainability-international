@@ -24,11 +24,13 @@
                 </a>
                 <div class="right">
                     <a class="tab <%-(page == 'golf-bmps')? 'active':'' -%>" href="/golf-bmps">Golf BMPs</a>
-                    <a class="tab <%-(page == 'sustainable')? 'active':'' -%>" href="/sustainable">Sustainable
+                    <a class="tab <%-(page == 'communities')? 'active':'' -%>" href="/communities">Sustainable
                         Communities</a>
+                    <%if (displayCommunityLinks) { %>
                     <a class="tab <%-(page == 'involvement')? 'active':'' -%>" href="/involvement">Community
                         Involvement</a>
-                    <a class="tab <%-(page == 'benefits')? 'active':'' -%>" href="/benefits">Benefits</a>
+                    <a class="tab <%-(page == 'awards')? 'active':'' -%>" href="/awards">Awards</a>
+                    <% } %>
                 </div>
             </div>
             <div class="content">

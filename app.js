@@ -50,8 +50,9 @@ var SIApp = function() {
 
 	self.createRoutes = function() {
 		self.get_routes = {};
-        self.pages = ['','golf-bmps','sustainable','benefits','involvement'];
-        self.pageNames = ['Home','Golf BMPs','Sustainable Communities','Benefits','Community Involvement'];
+        self.pages = ['','golf-bmps','communities','involvement','awards'];
+        self.pageNames = ['Home','Golf BMPs','Sustainable Communities','Community Involvement','Awards'];
+        self.communityPages = ['communities','involvement','awards'];
 		self.get_routes['/*'] = function(req, res) {
             var rendered = false;
             var url = req.url;
@@ -59,6 +60,7 @@ var SIApp = function() {
                 var page = self.pages[i];
                 res.locals.page = page;
                 res.locals.pageName = self.pageNames[i];
+                res.locals.displayCommunityLinks = self.communityPages.indexOf(page) > -1;
                 var pageWithSlash = "/"+page;
                 if(url == pageWithSlash) {
                     res.setHeader('Content-Type', 'text/html; charset=utf8');
