@@ -14,8 +14,8 @@ var SIApp = function() {
 
     self.setupVariables = function() {
         //  Set the environment variables we need.
-        self.ipaddress = (process.env.VCAP_APP_HOST || 'localhost');
-        self.port      = (process.env.VCAP_APP_PORT || 3000);
+        self.ipaddress = (process.env.HOST || '0.0.0.0');
+        self.port      = (process.env.PORT || 3000);
 
         if (typeof self.ipaddress === "undefined") {
             //  Log errors but continue w/ 127.0.0.1
